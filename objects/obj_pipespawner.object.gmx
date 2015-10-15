@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Spawns the pipe obstacles, the distance of the obstacles between each other depends on the alarm times set.
+            <string>// Spawns the pipe obstacles, the distance of the obstacles between each other depends
+// on the alarm times set and room speed. For example, the default room speed is 60
+// while alarm 0 gets triggered at 106. It should take about 1.7 seconds.
 
 instance_create(x+0,y+(0 + choose(-32,-64)),obj_pipe);
 alarm[0] = 106;

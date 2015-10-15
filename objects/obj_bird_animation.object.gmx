@@ -50,27 +50,14 @@ image_speed = 0.25;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//This will make the game begin
+            <string>// This will make the game begin
 
 vspeed = -7;
+room_goto_next();
    
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>222</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_next_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

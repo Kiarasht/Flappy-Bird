@@ -25,13 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Draws the score, making 3D style text with 2 fonts.
+            <string>// Draws the score, making 3D style text with 2 fonts.
+
 draw_set_color(c_black);
 draw_set_font(font1);
-draw_text(155, 90, string(score));
+draw_text(5, -15, string(score));
 draw_set_color(c_white);
 draw_set_font(font2);
-draw_text(155, 90, string(score));
+draw_text(5, -15, string(score));
 </string>
           </argument>
         </arguments>

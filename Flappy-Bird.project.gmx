@@ -14,7 +14,6 @@
       <sprite>sprites\spr_cat</sprite>
       <sprite>sprites\spr_flap</sprite>
       <sprite>sprites\spr_on_ground</sprite>
-      <sprite>sprites\spr_hit_wall</sprite>
     </sprites>
     <sprite>sprites\spr_block</sprite>
     <sprite>sprites\spr_pipe_ground</sprite>

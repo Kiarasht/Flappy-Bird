@@ -28,8 +28,6 @@
             <string>// Launches the bird in the air, when the game starts. 
         
 vspeed = -7;
-
-     
 </string>
           </argument>
         </arguments>
@@ -52,7 +50,9 @@ vspeed = -7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspeed = 1;
+            <string>// Start to come down
+
+vspeed = 1;
 </string>
           </argument>
         </arguments>
@@ -61,29 +61,24 @@ vspeed = -7;
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>5</kind>
-            <sprite>spr_cat</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <kind>1</kind>
+            <string>// Change into the default sprite
+
+sprite_index = spr_cat;
+</string>
           </argument>
         </arguments>
       </action>
@@ -105,7 +100,7 @@ vspeed = -7;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//The basic gravity
+            <string>// The basic gravity
 
 if place_empty(x+0,y+1)
    {
@@ -141,7 +136,7 @@ if place_empty(x+0,y+1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//This roof is ment to be invisible and block your bird from going out of the room.
+            <string>// This roof is ment to be invisible and block your bird from going out of the room.
 
 move_contact_all(direction,12)
 
@@ -167,18 +162,19 @@ move_contact_all(direction,12)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//This is the ground block, which will be invisible &amp; used on the same height level of the
-//room, where the grass floor background is placed. 
+            <string>// This is the ground block, which will be invisible &amp; used on the same height level of the
+// room, where the grass floor background is placed. 
 
+// Dead bird
 instance_change(obj_dead,true);
 
-//play sound
+// Play sound
 sound_play(whack)
 
-//Standard blockage
+// Standard blockage
 move_contact_all(direction,12)
 
-//Stops the background from moving
+// Stops the background from moving
 background_hspeed[2] = 0
 vspeed = 0
 
@@ -205,8 +201,9 @@ vspeed = 0
           <argument>
             <kind>1</kind>
             <string>//Plays the crashing sound
-
 sound_play(whack);
+
+// Dead bird
 instance_change(obj_dead,true);
 </string>
           </argument>
@@ -231,8 +228,9 @@ instance_change(obj_dead,true);
           <argument>
             <kind>1</kind>
             <string>//Plays the crashing sound
-
 sound_play(whack);
+
+// Dead bird
 instance_change(obj_dead,true);
 </string>
           </argument>
@@ -240,34 +238,6 @@ instance_change(obj_dead,true);
       </action>
     </event>
     <event eventtype="6" enumb="53">
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_flap</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0.5</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -284,16 +254,19 @@ instance_change(obj_dead,true);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>// The bird will change to the flap sprite
+sprite_index = spr_flap;
+
+// After (12/60) seconds, change back to default sprite
 alarm[0] = 12;
 
 //Play the flap sound
 sound_play(flap);
-//The flapy launch.
-//The smaller the vertical speed is, the higher your bird will flap
 
-   vspeed = -7
+// The smaller the vertical speed is, the higher your bird will flap
+vspeed = -7;
 
+// Start to come down
 alarm[1] = 250; 
 </string>
           </argument>

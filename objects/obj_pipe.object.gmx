@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Sets the speed of lower pipe. It also creates a second pipe and a score object.
+            <string>// Sets the speed of lower pipe. It also creates a second pipe and a score object
+// between them.
 
 hspeed = -2;
 
